@@ -2,6 +2,8 @@
 ## Built With
 - React
 - React Icons
+- Marked
+- Highlight.js
 ## Installation
 1. `git clone https://github.com/jvjspy/freecodecamp.git`
 2. `yarn install|npm install`
