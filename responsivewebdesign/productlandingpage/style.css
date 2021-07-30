@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg: #eee;
+  --primary: #f1c40f;
+}
+.btn {
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.btn-bold {
+  font-weight: 900;
+}
+body {
+  background-color: var(--bg);
+}
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  min-height: 80px;
+  background: inherit;
+}
+header img {
+  width: 300px;
+  max-width: 100%;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+header ul li {
+  margin: 0 2rem;
+}
+header ul li a {
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+  header ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  header ul li {
+    margin-top: 10px;
+  }
+}
+.container {
+  width: 890px;
+  max-width: 100%;
+  margin: auto;
+}
+#get-started {
+  margin-top: 100px;
+  text-align: center;
+}
+#get-started h1 {
+  margin-bottom: 1rem;
+}
+#get-started form input {
+  outline: none;
+  max-width: 100%;
+  width: 275px;
+  padding: 5px;
+}
+#get-started form button {
+  margin: 15px 0;
+}
+@media (max-width: 600px) {
+  #get-started {
+    margin-top: 120px;
+  }
+}
+#features {
+  margin-top: 50px;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  height: 125px;
+}
+.feature-icon {
+  width: 20%;
+  color: var(--primary);
+  text-align: center;
+}
+.feature-text {
+  width: 80%;
+}
+@media (max-width: 512px) {
+  .feature-icon {
+    display: none;
+  }
+  .feature-text {
+    text-align: center;
+    width: 100%;
+  }
+}
+#how-it-work {
+  margin-top: 50px;
+}
+#how-it-work iframe {
+  width: 560px;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+#pricing {
+  margin-top: 50px;
+  display: flex;
+}
+
+.product {
+  border: 1px solid black;
+  width: 33.33%;
+  margin: 10px;
+  text-align: center;
+}
+.product h3 {
+  padding: 10px 0;
+  background: #ddd;
+}
+.product .price {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+.product ul {
+  list-style: none;
+}
+.product ul li {
+  margin: 10px 0;
+}
+.product button {
+  margin: 20px 0;
+}
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product {
+    width: 300px;
+  }
+}
+footer {
+  padding: 10px;
+  background-color: #ddd;
+}
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+footer ul li {
+  margin: 0 1rem;
+}
+footer ul li a {
+  text-decoration: none;
+  color: black;
+}
+footer p {
+  text-align: right;
+}

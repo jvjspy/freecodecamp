@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 18px;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2c2d6;
+}
+.calculator {
+  width: 340px;
+  max-width: 100%;
+  margin: 0 10px;
+  background-color: black;
+  padding: 5px;
+  box-shadow: inset 2px 2px 2px #4d4d4d, inset -2px -2px 2px #4d4d4d;
+}
+.buttons-grid {
+  display: grid;
+  grid-template: repeat(5, 66px) / repeat(4, 1fr);
+}
+.buttons-grid button {
+  background-color: #4d4d4d;
+  padding: 20px 30px;
+}
+.buttons-grid button[class="+"],
+.buttons-grid button[class="-"],
+.buttons-grid button[class="x"],
+.buttons-grid button[class="/"],
+.buttons-grid button[class="+/-"] {
+  background-color: #666;
+}
+.buttons-grid button[class="AC"] {
+  background-color: red;
+  grid-column: span 2;
+}
+.buttons-grid button[class="0"] {
+  grid-column: span 2;
+}
+.buttons-grid button[class="="] {
+  background-color: blue;
+}
+.screen {
+  overflow: hidden;
+  text-align: right;
+  line-height: 1;
+}
+.screen-output {
+  color: white;
+  font-size: 2rem;
+}
+.screen-formula {
+  color: orange;
+  min-height: 1.5rem;
+  font-size: 1.5rem;
+}

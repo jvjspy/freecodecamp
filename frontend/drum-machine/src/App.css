@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  font-size: 18px;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8d8d8d;
+}
+.container {
+  background-color: #b3b3b3;
+  padding: 30px;
+  border: 5px solid orange;
+  width: 800px;
+  max-width: 100%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drum-pad-grid {
+  display: grid;
+  grid-template: repeat(3, 80px) / repeat(3, 100px);
+  gap: 10px;
+}
+.drum-pad {
+  background-color: #808080;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.drum-pad.active {
+  box-shadow: none;
+  background: orange;
+  margin-top: 3px;
+}
+.switch {
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+  background-color: black;
+  cursor: pointer;
+  padding: 4px;
+}
+.switch-thumb {
+  display: block;
+  width: calc(100% / 2);
+  height: 100%;
+  background-color: indigo;
+  transition: 0.3s;
+}
+.switch input {
+  display: none;
+}
+.switch input:checked ~ .switch-thumb {
+  transform: translateX(100%);
+}
+.slider {
+  width: 200px;
+  appearance: none;
+  background-color: #424242;
+  height: 8px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  background-color: indigo;
+  width: 8px;
+  height: 30px;
+  cursor: pointer;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+}
+.display {
+  background-color: #808080;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.controls {
+  width: 100%;
+  padding: 20px 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 15px;
+    min-height: 90vh;
+  }
+  .controls {
+    flex: 1;
+  }
+  .drum-pad-grid {
+    grid-template: repeat(3, 60px) / repeat(3, 80px);
+  }
+}
+.switch-group {
+  text-align: center;
+}
+.switch-group .switch-label {
+  font-weight: 600;
+}

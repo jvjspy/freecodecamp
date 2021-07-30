@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 18px;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.card {
+  background-color: white;
+  padding: 40px;
+  width: 450px;
+  max-width: 100%;
+  border-radius: 3px;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.card blockquote {
+  transition: 0.3s;
+  animation: appear 0.5s ease-in;
+}
+.card blockquote p {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+.card blockquote svg {
+  margin-right: 0.5rem;
+}
+.card blockquote cite {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0;
+  text-align: right;
+  font-style: normal;
+  font-weight: 100;
+}
+.btn {
+  display: inline-block;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  transition: 0.3s;
+}
+.btn-small {
+  padding: 10px 13px;
+}
+.btn:hover {
+  opacity: 0.5;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-buttons a:first-child {
+  margin-right: 0.3rem;
+}
+.author {
+  margin-top: 1rem;
+  color: white;
+  font-size: 0.8rem;
+}
+.loading {
+  text-align: center;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.loading .loading-icon {
+  animation: rotate 0.5s linear infinite;
+}
+.error {
+  color: red;
+}
